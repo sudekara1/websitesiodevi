@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family:"Şefik";
+    padding: 10px;
+    background:#1F2024;
+    margin: 0;
+}
+
+
+
+.dark-mode {
+    background-color: black;
+    color: rgb(248, 249, 245);
+}
+
+
+/* En üstte bulunan başlığı şekillendiriyoruz */
+header { 
+    padding: 30px;
+    text-align: center;
+    background:#AEACA3 ;
+    position: relative;
+}
+header h1 {
+    font-size: 50px;
+}
+
+/* Navigasyon menüsünü sabit yap */
+nav {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+nav a {
+    float: left;
+    display: block;
+    color: #f8f6f6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color:#FACFCE ;
+    color: black;
+}
+nav a:last-child {
+    float: right;
+}
+
+/* İçeriği menüye göre ayarlamak için üst padding ekleyelim */
+.row {
+    margin-top: 50px;
+}
+
+/* Left column - sol sütun */
+.leftcolumn {
+    float: left;
+    width: 75%;
+    height: -100px; /* Sayfanın tamamına yayılması için */
+}
+
+
+/* Right column - sağ sütun */
+.rightcolumn {
+    float: right;
+    width: 25%;
+    background-color: #1F2024;
+    padding-left: 20px;
+}
+
+/* Kart yapısı */
+.card {
+    background-color: rgb(195, 218, 241);
+    padding: 50px;
+    margin-top: 50px;
+}
+
+/* Resim kutusu */
+.resim {
+    background-color:#EDAA25;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Row içeriğini düzenle */
+.row::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #EDAA25;
+    margin-top: 20px;
+}
+
+
+/* Responsive Layout */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+    nav a {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
